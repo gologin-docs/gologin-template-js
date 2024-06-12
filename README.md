@@ -33,7 +33,7 @@ Step 3: Run sample code
 node examples/scrape-amazon-product-data.js
 ```
 
-## Step 4 (Optional): provide `profile_id`
+## Step 3.1 (Optional): provide `profile_id`
 
 Sample: Scrape amazon product data
 ====
