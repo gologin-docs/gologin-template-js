@@ -9,11 +9,18 @@ git clone git@github.com:gologinapp/gologin-template-js.git
 <details>
 <summary>Step-by-step guide how to install git, node and more</summary>
 
+## Install Node
+## Install dependecies
+
+</details>
+
 [`/examples/`](https://github.com/gologin-docs/gologin-template-js/tree/main/examples)
 directory contains examples to help you get started. 
 
+## Provide API_KEY
 
-</details>
+## Provide `profile_id`
+
 
 Sample: Scrape amazon product data
 ====
