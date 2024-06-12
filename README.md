@@ -1,5 +1,4 @@
-
-
+# Copy this template
 
 Clone this template to implement browser automation:
 
@@ -7,23 +6,24 @@ Clone this template to implement browser automation:
 git clone git@github.com:gologinapp/gologin-template-js.git
 ```
 
-
-
 <details>
 <summary>Step-by-step guide how to install git, node and more</summary>
 
-  
+(/examples/)[https://github.com/gologin-docs/gologin-template-js/tree/main/examples]
+contains example to help you get started. 
+
+
 </details>
 
-Scrape amazon product data
+Sample: Scrape amazon product data
 ====
 
 
-Create facebook account
+Sample: Create facebook account
 ====
 
 
-Create google account
+Sample: Create google account
 ====
 
 
