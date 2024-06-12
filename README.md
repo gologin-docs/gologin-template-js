@@ -1,4 +1,5 @@
-# Step 1: Copy this template
+Step 1: Copy this template
+====
 
 Copy this template to start implementing browser automation:
 
@@ -17,14 +18,16 @@ git clone git@github.com:gologinapp/gologin-template-js.git
 [`/examples/`](https://github.com/gologin-docs/gologin-template-js/tree/main/examples)
 directory contains examples to help you get started. 
 
-## Step 2: Provide API_KEY
+Step 2: Provide API_KEY
+====
 
 - Login or create account
 - Visit Page
 - copy key
 - paste key
 
-## Step 3: Run sample code
+Step 3: Run sample code
+====
 
 ```
 node examples/scrape-amazon-product-data.js
