@@ -1,6 +1,6 @@
 # Step 1: Copy this template
 
-Clone this template to implement browser automation:
+Copy this template to start implementing browser automation:
 
 ```sh
 git clone git@github.com:gologinapp/gologin-template-js.git
