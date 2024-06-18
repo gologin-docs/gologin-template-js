@@ -1,10 +1,7 @@
-
-// your token api (located in the settings, api)
-// https://github.com/gologinapp/gologin#usage
-
-
-const GOLOGIN_API_TOKEN = "YOUR_API_TOKEN";
 import { startCloudBrowserAndOpenNewPage } from "gologin";
+
+// Get YOUR_API_TOKEN: https://app.gologin.com/personalArea/TokenApi
+const GOLOGIN_API_TOKEN = "YOUR_API_TOKEN";
 
 
 (async () => {
