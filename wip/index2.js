@@ -1,4 +1,6 @@
-import gologin from './gologin.js';
+import Gologin from './gologin.js';
+
+const gologin = new Gologin()
 
 async function main() {
   const browser = await gologin.launch()
