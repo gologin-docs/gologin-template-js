@@ -1,5 +1,5 @@
 
-import gologin from './gologin.js';
+import gologin from 'gologin';
 
 async function main() {
   const browser = await gologin.launch()

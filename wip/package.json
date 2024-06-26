@@ -1,0 +1,15 @@
+{
+  "name": "cloud",
+  "module": "index.js",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "gologin": "^2.0.29",
+    "puppeteer": "^22.12.0"
+  }
+}
