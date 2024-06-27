@@ -10,7 +10,7 @@ async function main() {
   await page.goto('https://www.ip-score.com/', { waitUntil: 'networkidle2' })
   await page.screenshot({ path: 'ip-score-100.jpg' })
 
-  const score = await page.$eval('#score', elt => elt.innerText)
+  const score = await page.$eval("#score", elt => elt.innerText)
   // Expecting '100/100'
   return score
 }
