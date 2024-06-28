@@ -1,3 +1,4 @@
+
 const { default: GoLogin } = await import("gologin");
 const { connect } = await import("puppeteer");
 
@@ -26,7 +27,7 @@ const legacyGologin = new GoLogin({
    * - function param
    * - env var
    * - .env file
-   * - autodetect
+   * - autodetect, OS-specific
    */
   executablePath: '/Users/kai/.gologin/browser/orbita-browser-124/Orbita-Browser.app/Contents/MacOS/Orbita',
 
@@ -35,32 +36,72 @@ const legacyGologin = new GoLogin({
    * - function param
    * - env var
    * - .env file
-   * - autodetect
+   * - autodetect, OS-specifif, based on system env vars
    */
   tmpdir: '/var/folders/p0/r6cb8k950cs9mm__sy8sph_m0000gn/T/',
 });
 
-function Gologin() {
-  let browser;
+const delay = (ms = 250) => new Promise(res => setTimeout(res, ms));
 
-  const gologin = {
+const ERROR_CODE = {
+  INVALID_EXEC_PATH: 1,
+  INVALID_PROFILE_ID: 2,
+  TOKEN_NOT_FOUND: 3,
+  TOKEN_PLAN_TOO_LOW: 4,
+  BROWSER_FAILED_TO_START: 6,
+  TRY_ANOTHER_PROXY: 7,
+}
+
+class GlError extends Error {
+  code
+  retryProxy
+  constructor(code = 0) {
+    super();
+    this.code = code;
+  }
+}
+
+function Gologin() {
+  let browsers = [];
+
+  return {
     async launch() {
       const started = await legacyGologin.startLocal()
       console.debug({ started })
-      browser = await connect({
+      const browser = await connect({
         browserWSEndpoint: started.wsUrl,
         ignoreHTTPSErrors: true,
       });
+      browsers.push
       return browser;
     },
+
+    async page(url) {
+      if (browser.length) {
+        browser = await this.launch()
+      }
+      const page = await browser.newPage()
+      await page.goto(url, { waitUntil: 'networkidle2' })
+      delay(500)
+      return page
+    },
+
+    async profile(params) {
+      let profileId;
+      if (params.id) {
+        profileId = params;
+      } else {
+
+      }
+      return params
+    },
+
     async exit(status = 0) {
-      await browser.close();
+      Promise.allSettled(browsers.map(browser => async () => await browser.close()))
       await legacyGologin.stopLocal({ posting: false })
       process.exit(status)
-    }
+    },
   }
-
-  return gologin;
 }
 
 export default Gologin
