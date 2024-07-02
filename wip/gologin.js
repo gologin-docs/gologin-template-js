@@ -72,7 +72,7 @@ function Gologin() {
         browserWSEndpoint: started.wsUrl,
         ignoreHTTPSErrors: true,
       });
-      browsers.push
+      browsers.push(browser)
       return browser;
     },
 
