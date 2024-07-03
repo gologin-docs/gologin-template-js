@@ -1,16 +1,16 @@
-import Gologin from './gologin.js';
+import { GologinApi } from 'gologin';
 
-const token = '' // get token https://app.gologin.com/personalArea/TokenApi
-const gologin = Gologin({ token })
+const token = process.env.GL_API_TOKEN // get token https://app.gologin.com/personalArea/TokenApi
+const glApi = GologinApi({ token })
 
 async function main() {
-  const browser = await gologin.launch()
+  const profile_id = process.env.GL_PROFILE_ID
+  const browser = await glApi.launch({ profile_id })
   const page = await browser.newPage()
   await page.goto('https://iphey.com/', { waitUntil: 'networkidle2' })
-  const status = await page.$eval(".trustworthy-status:not(.hide)", elt => elt?.innerText?.trim())
+  const status = await page.$eval(".trustworthy- :not(.hide)", elt => elt?.innerText?.trim())
 
-  // Expecting 'Trustworthy'
-  return status
+  return status // Expecting 'Trustworthy'
 }
 
-main().catch(console.error).then(console.info).finally(gologin.exit)
+main().catch(console.error).then(console.info).finally(glApi.exit)
