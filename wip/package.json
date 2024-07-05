@@ -6,7 +6,6 @@
     "iphey": "GL_PROFILE_ID=65817ea08b2308834d2adafe GL_API_TOKEN=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTgxN2VhMDhiMjMwODgzNGQyYWRhYjUiLCJ0eXBlIjoiZGV2Iiwiand0aWQiOiI2NjcxMWVlNjY0ZDQyYzMyNTNlMzcxN2UifQ.ew557PrIrv8GOqrOEmdzUsyjI3WU_wRCslwEmLUE5cA\" node index ",
     "multilogin": "GL_API_TOKEN=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTgxN2VhMDhiMjMwODgzNGQyYWRhYjUiLCJ0eXBlIjoiZGV2Iiwiand0aWQiOiI2NjcxMWVlNjY0ZDQyYzMyNTNlMzcxN2UifQ.ew557PrIrv8GOqrOEmdzUsyjI3WU_wRCslwEmLUE5cA\" node multilogin "
   },
-
   "dependencies": {
     "gologin": "file:../../../repos/gologin",
     "puppeteer": "^22.12.0"
